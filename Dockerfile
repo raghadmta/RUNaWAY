@@ -1,12 +1,6 @@
-FROM nginx:latest
-LABEL author="Raghad Almutlaq"
+FROM nginx
+
+COPY . /usr/share/nginx/html
+VOLUME [ "/usr/share/nginx/html" ] 
 
 EXPOSE 80
-
-COPY . /var/www
-
-WORKDIR /var/www
-RUN nginx install
-
-VOLUME [ "/var/www" ]
-CMD ["nginx", "start"]
