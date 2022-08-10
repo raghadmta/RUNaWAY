@@ -1,4 +1,4 @@
-FROM node:latest
+FROM niginx:latest
 LABEL author="Raghad Almutlaq"
 
 EXPOSE 80
@@ -6,7 +6,7 @@ EXPOSE 80
 COPY . /var/www
 
 WORKDIR /var/www
-RUN npm install
+RUN niginx install
 
 VOLUME [ "/var/www" ]
-CMD ["npm", "start"]
+CMD ["niginx", "start"]
