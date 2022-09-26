@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "registry.hub.docker.com/goraghad/runaway-game"
+      "Name": "registry.hub.docker.com/usrename/iamgeName"
     },
     "Ports": [
       {
