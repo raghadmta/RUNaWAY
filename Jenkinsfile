@@ -5,19 +5,19 @@ pipeline {
 	environment {
 		// Your Docker Info
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub-token')
-        DOCKERHUB_IMG = 'user/imageName:tag'
+		DOCKERHUB_IMG = 'user/imageName:tag'
 
 		AWS_ACCESS_KEY_ID     = credentials('aws-secret-key-id')
-  		AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+		AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
 
- 		// Your S3 bucket name	
+		// Your S3 bucket name	
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'S3-BucketName'
 
-       	// Your EB App,Env name
-        AWS_EB_APP_NAME = "EBApp-Name"
-        AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "EBEnv-Name" 
+		// Your EB App,Env name
+		AWS_EB_APP_NAME = "EBApp-Name"
+		AWS_EB_APP_VERSION = "${BUILD_ID}"
+		AWS_EB_ENVIRONMENT = "EBEnv-Name" 
 
 	}
 
